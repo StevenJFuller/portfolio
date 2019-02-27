@@ -3,7 +3,19 @@ import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
+import Footer from "./footer"
 import "./layout.css"
+
+import { library } from "@fortawesome/fontawesome-svg-core"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import {
+  faTwitter,
+  faGithub,
+  faYoutube,
+  faFacebookF,
+} from "@fortawesome/free-brands-svg-icons"
+
+library.add(faTwitter, faGithub, faYoutube, faFacebookF)
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -28,11 +40,7 @@ const Layout = ({ children }) => (
           }}
         >
           <main>{children}</main>
-          <footer>
-            © {new Date().getFullYear()}, Built with
-            {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
-          </footer>
+          <Footer />
         </div>
       </>
     )}

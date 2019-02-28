@@ -7,6 +7,7 @@ const HeaderBar = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 3rem;
 `
 
 const Logo = styled.div`
@@ -32,6 +33,9 @@ const Title = styled.h1`
   line-height: 0;
   text-transform: uppercase;
   color: #333;
+  @media (max-width: 720px) {
+    display: none;
+  }
 `
 
 const Navigation = styled.ul`
@@ -43,43 +47,44 @@ const Navigation = styled.ul`
   list-style: none;
   justify-content: space-between;
   align-items: center;
-  background-color: #333;
-  & li {
+  border-bottom-left-radius: 5px;
+  @media (max-width: 720px) {
+    width: 275px;
+  }
+  li {
     margin: 0;
-    padding: 15px 30px;
+    align-self: stretch;
+    padding: 25px 31.5px;
+    font-size: 1.25rem;
+    transition: 0.2s ease;
+    background-color: #333;
+    &:hover {
+      background-color: transparent;
+      color: #333;
+    }
+    @media (max-width: 720px) {
+      padding: 25px 19px;
+    }
   }
 `
 
 const Header = ({ siteTitle }) => (
   <HeaderBar>
-    <Link
-      to="/"
-      style={{ textDecoration: `none`, display: `flex`, alignItems: `center` }}
-    >
+    <Link to="/">
       <Logo>{"${ƒ}"}</Logo>
       <Title>{siteTitle}</Title>
     </Link>
     <nav>
       <Navigation>
-        <Link to="/about" style={{ color: `#f7f7f7`, textDecoration: `none` }}>
+        <Link to="/about" style={{ color: `#f7f7f7` }}>
           <li>About</li>
         </Link>
-        <li>
-          <Link
-            to="/about"
-            style={{ color: `#f7f7f7`, textDecoration: `none` }}
-          >
-            About
-          </Link>
-        </li>
-        <li>
-          <Link
-            to="/about"
-            style={{ color: `#f7f7f7`, textDecoration: `none` }}
-          >
-            About
-          </Link>
-        </li>
+        <Link to="/about" style={{ color: `#f7f7f7` }}>
+          <li>Contact</li>
+        </Link>
+        <Link to="/about" style={{ color: `#f7f7f7` }}>
+          <li>Blog</li>
+        </Link>
       </Navigation>
     </nav>
   </HeaderBar>

@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 const Footer = styled.footer`
-  margin: 0 auto;
+  margin: 3rem auto;
   max-width: 300px;
   text-align: center;
   display: flex;

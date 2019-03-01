@@ -3,8 +3,8 @@ import styled from "styled-components"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 const Footer = styled.footer`
-  margin: 3rem auto;
-  max-width: 300px;
+  margin: 2rem auto;
+  max-width: 320px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -14,6 +14,7 @@ const Footer = styled.footer`
 const SocialBar = styled.div`
   display: flex;
   justify-content: space-between;
+  font-size: 1.5rem;
 `
 
 export default () => (

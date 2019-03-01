@@ -8,6 +8,7 @@ const HeaderBar = styled.header`
   justify-content: space-between;
   align-items: center;
   margin-bottom: 3rem;
+  max-width: 100%;
 `
 
 const Logo = styled.div`
@@ -49,21 +50,27 @@ const Navigation = styled.ul`
   align-items: center;
   border-bottom-left-radius: 5px;
   @media (max-width: 720px) {
-    width: 275px;
+    width: 250px;
+  }
+  a {
+    flex: 1;
+    text-align: center;
+    height: 100%;
+    display: flex;
   }
   li {
     margin: 0;
-    align-self: stretch;
-    padding: 25px 31.5px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex: 1;
+    height: 100%;
     font-size: 1.25rem;
     transition: 0.2s ease;
     background-color: #333;
     &:hover {
       background-color: transparent;
       color: #333;
-    }
-    @media (max-width: 720px) {
-      padding: 25px 19px;
     }
   }
 `

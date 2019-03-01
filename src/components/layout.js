@@ -92,7 +92,7 @@ const Layout = ({ children }) => (
             style={{
               flex: `1 1 auto`,
               backgroundColor: `rgba(255, 255, 255, 0.5)`,
-              padding: `0 3rem`,
+              padding: `2rem 3rem`,
               display: `flex`,
               flexDirection: `column`,
               width: `75vw`,

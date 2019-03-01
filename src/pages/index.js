@@ -20,7 +20,6 @@ const Skills = styled.h4`
   color: #a6a6a6;
   border-bottom: 5px solid orange;
 `
-const TypistExample = styled.div``
 
 export default () => (
   <Layout>

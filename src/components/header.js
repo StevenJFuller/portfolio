@@ -7,7 +7,7 @@ const HeaderBar = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   max-width: 100%;
 `
 
